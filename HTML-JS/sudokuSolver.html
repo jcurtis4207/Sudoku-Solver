@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Sudoku Solver</title>
+	<link rel="stylesheet" type="text/css" href="sudokuSolver-style.css">
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+	<script src="sudokuSolver.js"></script>
+</head>
+<body>
+<!-- Title and Links -->
+	<h1>Sudoku Solver</h1>
+	<div id="links">
+	<a href="sudokuSolver.html">Home</a>
+	<a href="sudokuSolver-style.css">CSS</a>
+	<a href="sudokuSolver.js">JavaScript</a>
+	</div>
+	<hr>
+<!--  Heading -->
+	<div id="heading">
+	<h2>Enter Puzzle Here</h2>
+	<p>&emsp;</p>
+	</div>
+<!-- Input Form -->
+	<div id="startForm">
+		<form name="input">
+			<table>
+				<tr>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+				</tr>
+				<tr>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+				</tr>
+				<tr>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+				</tr>
+				<tr>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+				</tr>
+				<tr>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+				</tr>
+				<tr>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+				</tr>
+				<tr>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+				</tr>
+				<tr>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+				</tr>
+				<tr>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+					<td><input type="text" size="1" maxlength="1"></td>
+				</tr>
+			</table><br>
+<!-- Radio Buttons, Slider, and Button -->
+			<input type="radio" name="radio" value="radio-instant" checked="checked">Just Give Me The Answer<br>
+			<input type="radio" name="radio" value="radio-realtime">Watch It Run<br>
+			<div id="show-slider">
+				<span class="small">Fast</span> Speed <span class="small">Slow</span>
+				<input type="range" min="1" max="30" value="15" id="slider"><br>
+			</div>
+			<input type="button" name="solve" value="  Solve the Puzzle  " onclick="readInput(this.form)">
+		</form>
+	</div>
+	
+<!-- Instructions Popup -->
+    <button class="trigger" id="inst-button">Instructions</button>	
+	<div class="popup-background">
+        <div class="popup-content">
+		<span class="close-button">&times;</span>
+		<p>Enter the numbers from a puzzle into the boxes.</p>
+		<p>( The tab button is your friend )</p>
+		<p>Then click "Solve the Puzzle".</p>
+		<p>To see how it works, click "Watch It Run".</p>
+		<p>Adjust the speed to your liking.</p>
+		<p><span id="caution">CAUTION:</span></p>
+		<p>Entering a very difficult puzzle will take several minutes</p>
+		<p>if you watch it run, even on the fastest speed.</p>
+        </div>
+    </div>
+	<script>
+		var popup = document.querySelector(".popup-background");
+		var trigger = document.querySelector(".trigger");
+		var closeButton = document.querySelector(".close-button");
+		function togglePopup() {
+			popup.classList.toggle("show-popup");
+		}
+		function windowOnClick(event) {
+			if (event.target === popup) {
+				togglePopup();
+			}
+		}
+		trigger.addEventListener("click", togglePopup);
+		closeButton.addEventListener("click", togglePopup);
+		window.addEventListener("click", windowOnClick);
+	</script>
+</body>
+</html>

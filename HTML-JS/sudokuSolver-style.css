@@ -1,0 +1,211 @@
+/*** Text ***/
+h1{
+	font-family: "Ubuntu";
+	font-size: 48px;
+	line-height: 20px;
+	text-align: center;
+	color: black;
+}
+h2{
+	font-family: "Ubuntu";
+	font-size: 28px;
+	line-height: 60px;
+	text-align: center;
+	color: black;
+}
+body{
+	font-family: "Vollkorn";
+	font-size: 18px;
+	line-height: 25px;
+	color: black;
+	text-align: center;
+	background: url(texture.jpg);
+}
+
+/*** Links ***/
+#links{
+	font-size: 20px;
+	text-align: right;
+	word-spacing: 30px;
+	position: relative;
+	top: -40px;
+	left: -50px;
+}
+a{
+	text-decoration: none;
+}
+a:link{
+	color: #00cca3;
+}
+a:visited{
+	color: #4da6ff;
+}
+a:hover{
+	font-weight: bold;
+}
+
+/*** Center Align Form Elements***/
+#startForm{
+	margin: auto;
+	width: 445px;
+	height: 660px;
+	text-align: center;
+}
+
+/*** Sudoku Table ***/
+table{
+	background: white;
+	border-collapse: collapse;
+	color: black;
+	font-family: Arial;
+	font-size: 16px;
+}
+td{
+	height: 45px;
+	width: 45px;
+	border: 1px solid black;
+	text-align: center;
+}
+td:first-child{
+	border-left: solid black;
+}
+td:nth-child(3n){
+	border-right: solid black;
+}
+tr:nth-child(1){
+	border-top: solid black;
+}
+tr:nth-child(3n) td{
+	border-bottom: solid black;
+}
+/*** Set the user-entered numbers apart from solution numbers ***/
+#original{
+	font-weight: bold;
+	color: #0000cc;
+}
+
+/*** Text Fields ***/
+input[type=text]{
+	border-top-style: hidden;
+	border-bottom-style: hidden;
+	border-left-style: hidden;
+	border-right-style: hidden;
+	text-align: center;
+	font-family: Arial;
+	font-size: 16px;
+	width: 40px;
+}
+input:focus{
+	outline: none;
+}
+
+/*** Button ***/
+input[type=button]{
+	background-color: #b3daff;
+	border-radius: 20px;
+	color: #333333;
+	font-size: 24px;
+	line-height: 1.5;
+	position: relative;
+	top: 40px;
+	cursor: pointer;
+}
+
+/*** Slider ***/
+#slider{
+	width: 100%;
+	-webkit-appearance: none;
+	appearance: none;
+	height: 5px;
+	background: #dddddd;
+	outline: none;
+	border: 1px solid #444444;
+}
+#slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 25px;
+	background: #99ccff;
+	border: 1px solid #444444;
+	border-radius: 10px;
+	cursor: pointer;
+}
+#slider::-moz-range-thumb {
+	width: 15px;
+	height: 25px;
+	background: #99ccff;
+	border: 1px solid #444444;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.small{
+	font-size: 14px;
+}
+/*** Show/Hide slider based on radio buttons ***/
+#show-slider{
+	margin: auto;
+	display: none;
+	width: 200px;
+	text-align: center;
+	word-spacing: 45px;
+	position: relative;
+	top: 15px;
+}
+input[value="radio-realtime"]:checked ~ #show-slider{
+	display: block;
+}
+
+/*** Instructions Popup***/
+.trigger{
+	border: none;
+	background: none;
+	cursor: pointer;
+	font-family: "Vollkorn";
+	font-size: 20px;
+	color: #4da6ff;
+	position: relative;
+	top: -715px;
+}
+.popup-background {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility 0s linear 0.25s, opacity 0.25s 0s;
+}
+.popup-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 20px 30px;
+	width: 500px;
+	border-radius: 20px;
+}
+.close-button {
+	float: right;
+	width: 30px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: #eeeeee;
+}
+.close-button:hover {
+	background-color: #aaaaaa;
+}
+.show-popup {
+	opacity: 1;
+	visibility: visible;
+	transition: visibility 0s linear 0s, opacity 0.25s 0s;
+}
+#caution{
+	color: #cc0000;
+	font-weight: bold;
+}
